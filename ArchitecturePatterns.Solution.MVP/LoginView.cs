@@ -2,12 +2,6 @@ namespace ArchitecturePatterns.Solution.MVP;
 
 public class LoginView : ILoginViewPresenter
 {
-    private LoginPresenter _presenter;
-
-    public void SetPresenter(LoginPresenter presenter)
-    {
-        _presenter = presenter;
-    }
 
     public string GetInput()
     {
@@ -20,8 +14,4 @@ public class LoginView : ILoginViewPresenter
         Console.WriteLine(text);
     }
 
-    public void HandleSayHello()
-    {
-        _presenter.SayHello();
-    }
 }

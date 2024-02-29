@@ -14,7 +14,6 @@ public class LoginPresenter
     public void SetView(ILoginViewPresenter view)
     {
         _view = view;
-        _view.SetPresenter(this);
     }
 
     public void SayHello()

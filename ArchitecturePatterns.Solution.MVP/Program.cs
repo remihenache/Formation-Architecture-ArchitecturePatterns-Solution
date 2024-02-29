@@ -12,6 +12,6 @@ class Program
         presenter.SetModel(model);
 
         // Simuler l'interaction utilisateur
-        view.HandleSayHello();
+        presenter.SayHello();
     }
 }
