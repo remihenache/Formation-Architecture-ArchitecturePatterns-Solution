@@ -9,7 +9,6 @@ public class LoginViewModel : INotifyPropertyChanged
     private string _input;
     private string _message;
     private readonly LoginModel _model = new LoginModel();
-    private readonly LoginService _loginService = new LoginService();
 
     public string Input
     {
@@ -20,7 +19,7 @@ public class LoginViewModel : INotifyPropertyChanged
             _input = value;
             OnPropertyChanged(nameof(Input));
             new SetUserNameCommand(_model).Execute(_input);
-            _message = new GetUserGreetingQuery(_model, _loginService).Execute();
+            _message = new GetUserGreetingQuery(_model).Execute();
             OnPropertyChanged(nameof(Message));
         }
     }

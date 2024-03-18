@@ -9,7 +9,7 @@ class Program
         var model = new LoginModel();
         var loginService = new LoginService();
         var setUserNameCommand = new SetUserNameCommandHandler(model);
-        var getUserGreetingQuery = new GetUserGreetingQueryHandler(model, loginService);
+        var getUserGreetingQuery = new GetUserGreetingQueryHandler(model);
         var mediator = new SimpleMediator(setUserNameCommand, getUserGreetingQuery);
 
         Console.WriteLine("Entrez votre nom :");

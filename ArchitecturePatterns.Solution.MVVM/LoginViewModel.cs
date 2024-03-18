@@ -6,7 +6,6 @@ public class LoginViewModel : INotifyPropertyChanged
 {
     private string _input;
     private string _message;
-    private readonly LoginService _loginService = new LoginService();
     private LoginModel _model = new LoginModel();
     public event PropertyChangedEventHandler PropertyChanged;
 
@@ -41,6 +40,6 @@ public class LoginViewModel : INotifyPropertyChanged
 
     public void SayHello()
     {
-        Message = _loginService.SayHello(Input);
+        Message = _model.GetMessage();
     }
 }
